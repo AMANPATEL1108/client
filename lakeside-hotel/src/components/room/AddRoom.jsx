@@ -42,7 +42,9 @@ const AddRoom = () => {
         setErrorMessage("Error adding room");
       }
     } catch (error) {
-      setErrorMessage(error.message);
+      setErrorMessage(
+        error.message || "An error occurred while adding the room"
+      );
     }
   };
 
